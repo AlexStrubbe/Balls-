@@ -3,13 +3,16 @@
 
 typedef struct
 {
-  int x;
-  int y;
+  int x, y;
+  int dx, dy;
 } BallPosition;
 
-extern BallPosition ball_pos;
+extern BallPosition ball_pos[10];
+extern int balls;
 extern int counter_val;
+extern int loop_breaker;
 void *UpdateBallPosition(void *arg);
 void *Counter(void *arg);
+void CreateBall();
 
 #endif
